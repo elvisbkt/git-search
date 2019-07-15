@@ -45,4 +45,4 @@ For any clarification or addition information, contact the author at elvisbkt@gm
 
 ## License
 
-This software is Licensed under MIT license Copyright (2019) [elvisbkt](https://github.com/elvisbkt/Git-Search/blob/master/LICENSE)
+This software is Licensed under MRT license Copyright (2019) [elvisbkt](https://github.com/elvisbkt/Git-Search/blob/master/LICENSE)
