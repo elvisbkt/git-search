@@ -1,0 +1,52 @@
+<nav class="navbar navbar-fixed-top navbar-light bg-dark">
+  <div class="row">
+    <div class="col-md-5">
+      <a class="navbar-brand" style="color: white " routerLinkActive="active" routerLink=""><h2>GitHub Search</h2></a>
+    </div>
+    <div class="col-md-7 form">
+        <form >
+          <div class="form-group">
+            <input class="form-control" type="search" placeholder="Search GitHub users with username" name="username" [(ngModel)]="username" (keyup)='findUser()'size="55">
+          </div>
+        </form>
+    </div>
+  </div>
+</nav>
+<div class="body-profile">
+  <div class="row">
+    <div class="col-md-4 profile">
+      <div class="image">
+        <img src="{{users.profilePic}}" alt="" srcset="">
+      </div><br>
+      <div class="name">
+        <h2><img src="https://img.icons8.com/material/24/000000/name.png"><span class="name-item">{{users.username}}</span></h2>
+      </div>
+      <div class="location">
+        <h4><img src="https://img.icons8.com/material/24/000000/marker.png"><span class="location-item">{{users.location}}</span></h4>
+      </div>
+      <a href="{{users.profileUrl}}" target="_blank"><button type="button" class="btn btn-outline-secondary">View On Github </button></a>
+    </div>
+    <div class="col-md-8 user-info">
+      <div class="list row">
+          <div class="col-md-3">
+              <p class="list-inline-item d-flex align-items-center" (click)='showRepos()'>View Repos </p>
+          </div>
+        <div class="col-md-3">
+            <p class="list-inline-item d-flex align-items-center">Followers<span class="badge badge-secondary badge-pill">{{users.followers}}</span></p>
+        </div>
+        <div class="col-md-3">
+          <p class="list-inline-item d-flex align-items-center">Following<span class="badge badge-secondary badge-pill">{{users.following}}</span></p>
+        </div>
+        <div class="col-md-3">
+          <p class="list-inline-item d-flex align-items-center">Repositories<span class="badge badge-secondary badge-pill">{{users.repos}}</span></p>
+        </div>
+      </div>
+      <div class="row">
+        <app-user-profile-details *ngIf='users.showDetails' [repos]='repo'></app-user-profile-details>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

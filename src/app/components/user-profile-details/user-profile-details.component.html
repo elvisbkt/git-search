@@ -1,0 +1,16 @@
+<div class="row" *ngFor='let repo of repos'>
+  <div class="display-repo">
+    <div class="repo-name">
+      <a href="{{repo.repoUrl}}" target="_blank"><h2>{{repo.repoName}}</h2></a>
+    </div>
+    <div class="repo-description">
+      <p>{{repo.repoDescription}}</p>
+    </div>
+    <div class="repo-language">
+      <p appHighlight>{{repo.language}}</p>
+    </div>
+    <div class="repo-created">
+      <p>Created {{repo.createdOn | dateCount}} days ago</p>
+    </div>
+  </div>
+</div>

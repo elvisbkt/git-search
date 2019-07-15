@@ -1,0 +1,23 @@
+.form {
+  margin-top: 15px
+}
+.body-profile{
+  margin: 20px;
+}
+.navbar-brand{
+  color: aliceblue;
+}
+.image img{
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+}
+.list{
+  border-bottom: 2px solid #333;
+}
+.list-inline-item{
+  transition: all 0.3s;
+}
+.list-inline-item:hover{
+  transform: scale(1.3);
+}
